@@ -1,5 +1,7 @@
 import {React, useRef} from 'react';
 import s from './App.module.css'
+import PropTypes from 'prop-types';
+
 
 
 export function Button({incrementPage}) {
@@ -11,3 +13,6 @@ export function Button({incrementPage}) {
     )
 }
 
+Button.propTypes = {
+    incrementPage: PropTypes.func.isRequired,
+}

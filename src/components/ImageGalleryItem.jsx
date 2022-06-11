@@ -1,4 +1,5 @@
 import s from './App.module.css'
+import PropTypes from 'prop-types';
 
 
 
@@ -12,3 +13,10 @@ import s from './App.module.css'
 }
 
 export default ImageGalleryItem
+
+ImageGalleryItem.propTypes = {
+    onClickImg: PropTypes.func.isRequired,
+    large: PropTypes.string.isRequired,
+    img: PropTypes.object.isRequired,
+    id: PropTypes.number.isRequired
+  }

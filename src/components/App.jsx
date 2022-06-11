@@ -29,9 +29,13 @@ class App extends Component {
     }
  
    handleFormSubmit = query => {
+    if(this.state.page > 1) {
+      this.setState({page: 1})
+    }
+    const imgData = query ? query : {};
     const {page} = this.state
     this.setState({photo: []})
-    this.setState({photoTags: query})
+    this.setState({photoTags: imgData})
     this.setState({loading: true})
     API.getImages(query, page).then(images => this.addDataToState(images)).finally(setTimeout(() => {this.setState({loading: false}) }, 2000))
   }

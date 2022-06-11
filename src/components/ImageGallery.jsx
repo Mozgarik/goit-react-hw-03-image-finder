@@ -1,6 +1,8 @@
 import {React} from "react";
 import ImageGalleryItem from "./ImageGalleryItem";
 import s from './App.module.css'
+import PropTypes from 'prop-types';
+
 
 export function ImageGallery({onClickImg, modal, photo}) {
       return(
@@ -19,4 +21,10 @@ export function ImageGallery({onClickImg, modal, photo}) {
        
       </ul>
     )  
+}
+
+ImageGallery.propTypes = {
+  onClickImg: PropTypes.func.isRequired,
+  modal: PropTypes.bool.isRequired,
+  photo: PropTypes.array.isRequired
 }

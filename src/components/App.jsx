@@ -89,7 +89,7 @@ class App extends Component {
         tags={photoTags}
         onClickImg={this.onClickImg}
         />}
-        {photo.length > 0 && <Button incrementPage={this.loadMore}/>}   
+        {photo.length >= 12 && <Button incrementPage={this.loadMore}/>}   
         <ToastContainer autoClose={3000}/>
         </div>
     )
